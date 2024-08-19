@@ -4,6 +4,21 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import Head from "next/head";
 import Link from "next/link";
 import Masonry from "react-masonry-css";
+import classNames from "classnames";
+import Image from "next/image";
+
+import reb0 from "/public/reb0.jpg";
+import reb1 from "/public/reb1.jpg";
+import reb2 from "/public/reb2.jpg";
+import reb3 from "/public/reb3.jpg";
+import reb4 from "/public/reb4.jpg";
+import reb5 from "/public/reb5.jpg";
+import reb6 from "/public/reb6.jpg";
+import reb7 from "/public/reb7.jpg";
+import reb8 from "/public/reb8.jpg";
+import reb9 from "/public/reb9.jpg";
+import reb10 from "/public/reb10.jpg";
+
 
 const tabs =  [
   {
@@ -20,6 +35,10 @@ const tabs =  [
   },
 ]
 
+const images = [
+
+]
+
 export default function Home() {
   return (
     <div className="h-full bg-[url('/reb0.jpg')] bg-top bg-cover overflow-auto">
@@ -29,8 +48,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="fixed top-0 w-full z-10 flex justify-between items-center h-[90px] px-6">
-        <div>I need money</div>
+      <header className="fixed top-0 w-full z-10 flex justify-between items-center h-[90px] px-10">
+        <span className="uppercase text-lg font-medium">I need money</span>
         <Link href="#" className = "rounded-3xl bg-white text-stone-700 px-3 py-2 hover:bg-opacity-90">
           Get in touch
         </Link>
@@ -44,7 +63,7 @@ export default function Home() {
               {tabs.map(tab => (
                 <Tab key={tab.key} className="px-2">
                 {({selected}) => (
-                  <span className={selected ? "text-white" : "text-stone-600"}>
+                  <span className={classNames("uppercase text-lg", selected ? "text-white" : "text-stone-600")}>
                     {tab.display}
                   </span>
                 )}
@@ -53,12 +72,18 @@ export default function Home() {
             </TabList>
             <TabPanels className="h-full max-w-[900px] w-full p-2 sm:p-4 my-6">
               <TabPanel>
-                <Masonry breakpointCols={2} className="flex gap-2" columnClassName="">
-                  <img src="/reb0.jpg" alt="reb0" className="my-2"/>
-                  <img src="/reb1.jpg" alt="reb1" className="my-2"/>
-                  <img src="/reb10.jpg" alt="reb2" className="my-2"/>
-                  <img src="/reb3.jpg" alt="reb3" className="my-2"/>
-                  <img src="/reb4.jpg" alt="reb4" className="my-2"/>
+                <Masonry breakpointCols={2} className="flex gap-4" columnClassName="">
+                  <Image src={reb0} alt = "reb0" className="my-4"/>
+                  <Image src={reb1} alt = "reb1" className="my-4"/>
+                  <Image src={reb2} alt = "reb2" className="my-4"/>
+                  <Image src={reb3} alt = "reb3" className="my-4"/>
+                  <Image src={reb4} alt = "reb4" className="my-4"/>
+                  <Image src={reb5} alt = "reb5" className="my-4"/>
+                  <Image src={reb6} alt = "reb6" className="my-4"/>
+                  <Image src={reb7} alt = "reb7" className="my-4"/>
+                  <Image src={reb8} alt = "reb8" className="my-4"/>
+                  <Image src={reb9} alt = "reb9" className="my-4"/>
+                  <Image src={reb10} alt = "reb10" className="my-4"/>
                 </Masonry>
               </TabPanel>
               <TabPanel>Rebecca</TabPanel>
@@ -68,7 +93,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="h-[60px] flex justify-center align-center">
+      <footer className="h-[90px] flex justify-center align-center uppercase text-lg font-medium">
         <p>Placeholder for footer</p>
       </footer>
     </div>
