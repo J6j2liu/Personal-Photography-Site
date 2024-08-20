@@ -39,9 +39,18 @@ const tabs = [
 import { all, reb, claire } from "./_images";
 
 const tabers = [
-  all,
-  reb,
-  claire,
+  {
+    images: all,
+    key: 'allImages',
+  },
+  {
+    images: reb,
+    key: 'rebImages',
+  },
+  {
+    images: claire,
+    key: 'claireImages',
+  },
 ]
 
 export default function Home() {
@@ -90,9 +99,9 @@ export default function Home() {
             </TabList>
             <TabPanels className="h-full max-w-[900px] w-full p-2 sm:p-4 my-6">
               {tabers.map((taber) => (
-                <TabPanel>
+                <TabPanel key={taber.key}>
                   <Masonry breakpointCols={2} className="flex gap-4" columnClassName="">
-                    {taber.map((image, idx) => (
+                    {taber.images.map((image, idx) => (
                       <Image
                         key={image.src}
                         src={image}
@@ -116,7 +125,7 @@ export default function Home() {
                     speed={500}
                     plugins={[lgThumbnail, lgZoom]}
                     dynamic
-                    dynamicEl={taber.map(image => ({
+                    dynamicEl={taber.images.map(image => ({
                       src: image.src,
                       thumb: image.src
                     }))}
