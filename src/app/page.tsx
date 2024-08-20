@@ -17,17 +17,7 @@ import 'lightgallery/css/lg-thumbnail.css';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-import reb0 from "/public/reb0.jpg";
-import reb1 from "/public/reb1.jpg";
-import reb2 from "/public/reb2.jpg";
-import reb3 from "/public/reb3.jpg";
-import reb4 from "/public/reb4.jpg";
-import reb5 from "/public/reb5.jpg";
-import reb6 from "/public/reb6.jpg";
-import reb7 from "/public/reb7.jpg";
-import reb8 from "/public/reb8.jpg";
-import reb9 from "/public/reb9.jpg";
-import reb10 from "/public/reb10.jpg";
+
 import { useRef } from "react";
 
 
@@ -46,18 +36,12 @@ const tabs = [
   },
 ]
 
-const images = [
-  reb0,
-  reb1,
-  reb2,
-  reb3,
-  reb4,
-  reb5,
-  reb6,
-  reb7,
-  reb8,
-  reb9,
-  reb10,
+import { all, reb, claire } from "./_images";
+
+const tabers = [
+  all,
+  reb,
+  claire,
 ]
 
 export default function Home() {
@@ -73,8 +57,8 @@ export default function Home() {
       </Head>
 
       <Image
-        className="fixed left-0 top-0 z-0"
-        src={reb10}
+        className="fixed left-0 top-0 z-0 object-cover h-full"
+        src={reb[10]}
         alt="bg"
         placeholder="blur"
         priority
@@ -105,41 +89,41 @@ export default function Home() {
               ))}
             </TabList>
             <TabPanels className="h-full max-w-[900px] w-full p-2 sm:p-4 my-6">
-              <TabPanel>
-                <Masonry breakpointCols={2} className="flex gap-4" columnClassName="">
-                  {images.map((image, idx) => (
-                    <Image
-                      key={image.src}
-                      src={image}
-                      alt="reb1"
-                      className="my-4 cursor-pointer"
-                      placeholder="blur"
-                      onClick={() => {
-                        lightboxRef.current?.openGallery(idx)
-                      }}
-                    />
-                  )
-                  )}
-                </Masonry>
+              {tabers.map((taber) => (
+                <TabPanel>
+                  <Masonry breakpointCols={2} className="flex gap-4" columnClassName="">
+                    {taber.map((image, idx) => (
+                      <Image
+                        key={image.src}
+                        src={image}
+                        alt="reb1"
+                        className="my-4 cursor-pointer"
+                        placeholder="blur"
+                        onClick={() => {
+                          lightboxRef.current?.openGallery(idx)
+                        }}
+                      />
+                    )
+                    )}
+                  </Masonry>
 
-                <LightGalleryComp
-                  onInit={(ref) => {
-                    if (ref) {
-                      lightboxRef.current = ref.instance;
-                    }
-                  }}
-                  speed={500}
-                  plugins={[lgThumbnail, lgZoom]}
-                  dynamic
-                  dynamicEl={images.map(image => ({
-                    src: image.src,
-                    thumb: image.src
-                  }))}
-                >
-                </LightGalleryComp>
-              </TabPanel>
-              <TabPanel>Rebecca</TabPanel>
-              <TabPanel>Claire</TabPanel>
+                  <LightGalleryComp
+                    onInit={(ref) => {
+                      if (ref) {
+                        lightboxRef.current = ref.instance;
+                      }
+                    }}
+                    speed={500}
+                    plugins={[lgThumbnail, lgZoom]}
+                    dynamic
+                    dynamicEl={taber.map(image => ({
+                      src: image.src,
+                      thumb: image.src
+                    }))}
+                  >
+                  </LightGalleryComp>
+                </TabPanel>
+              ))}
             </TabPanels>
           </TabGroup>
         </div>
@@ -151,3 +135,4 @@ export default function Home() {
     </div>
   );
 }
+
