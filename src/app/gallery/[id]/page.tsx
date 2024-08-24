@@ -42,6 +42,7 @@ export default function Page({ params }: { params: { id: string } }) {
                 <p>Jonathan Liu Photography</p>
             </footer>
         </div>
+
     );
 }
 
