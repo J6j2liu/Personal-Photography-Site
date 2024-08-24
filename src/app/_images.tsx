@@ -26,12 +26,11 @@ import ang2 from "/public/ang2.jpg";
 import ang3 from "/public/ang3.jpg";
 import ang4 from "/public/ang4.jpg";
 import ang5 from "/public/ang5.jpg";
-
-import angela0 from "/public/angela0.jpg";
-import angela1 from "/public/angela1.jpg";
-import angela2 from "/public/angela2.jpg";
-import angela3 from "/public/angela3.jpg";
-import angela4 from "/public/angela4.jpg";
+import ang6 from "/public/ang6.jpg";
+import ang7 from "/public/ang7.jpg";
+import ang8 from "/public/ang8.jpg";
+import ang9 from "/public/ang9.jpg";
+import ang10 from "/public/ang10.jpg";
 
 import sydney1 from "/public/sydney (1).jpg";
 import sydney2 from "/public/sydney (2).jpg";
@@ -109,17 +108,17 @@ export const Claire = [
 ]
 
 export const Angela = [
-    angela0,
-    angela1,
-    angela2,
-    angela3,
-    angela4,
     ang0,
     ang1,
     ang2,
     ang3,
     ang4,
     ang5,
+    ang6,
+    ang7,
+    ang8,
+    ang9,
+    ang10,
 ]
 
 export const Sydney = [
