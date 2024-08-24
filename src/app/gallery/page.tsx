@@ -32,7 +32,7 @@ export default function Page() {
                   placeholder="blur"
                 />
                 <a key={key + "link"} href={"/gallery/" + key} className="absolute inset-0 bg-stone-900 opacity-0 hover:opacity-40
-                items-center justify-center flex text-xl uppercase">{key}</a>
+                items-center justify-center flex text-xl uppercase duration-300">{key}</a>
               </div>
             ))}
           </Masonry>

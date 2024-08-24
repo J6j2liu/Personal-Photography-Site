@@ -1,15 +1,23 @@
 "use client"
 
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import Head from "next/head";
-import Link from "next/link";
 import Masonry from "react-masonry-css";
-import classNames from "classnames";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import React from "react";
+
+
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 import { dic } from "../../_images";
 
+
 export default function Page({ params }: { params: { id: string } }) {
+    const [open, setOpen] = React.useState(false);
+    const [ind, setInd] = React.useState(0);
 
     return (
         <div className="h-full overflow-auto">
@@ -31,10 +39,19 @@ export default function Page({ params }: { params: { id: string } }) {
                                 alt="reb1"
                                 className="my-4 cursor-pointer"
                                 placeholder="blur"
+                                onClick={() => { setOpen(true), setInd(idx) }}
                             />
                         )
                         )}
                     </Masonry>
+
+                    <Lightbox
+                        open={open}
+                        close={() => setOpen(false)}
+                        slides={dic[params.id]}
+                        index={ind}
+                        plugins={[Zoom, Thumbnails]}
+                    />
                 </div>
             </main>
 
