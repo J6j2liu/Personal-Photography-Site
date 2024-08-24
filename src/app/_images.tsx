@@ -20,6 +20,7 @@ import claire6 from "/public/claire6.jpg";
 import claire7 from "/public/claire7.jpg";
 import claire8 from "/public/claire8.jpg";
 
+import { StaticImageData } from "next/image";
 
 export const reb = [
     reb0,
@@ -47,7 +48,5 @@ export const claire = [
     claire8,
 ]
 
-export const all = [
-    ...reb,
-    ...claire,
-]
+export const dic: { [name: string]: StaticImageData[] } = { "reb": reb, "claire": claire };
+export const pics: string[] = ["reb", "claire"];

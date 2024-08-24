@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Expletus_Sans } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import Image from "next/image";
 import { reb } from "./_images";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
@@ -32,29 +31,36 @@ export default function RootLayout({
         />
 
         <header className="fixed top-0 w-full z-30 flex justify-between items-center h-[90px] px-10">
-          <div>
-            <div className="bg-black opacity-0 hover:opacity-90" />
-            <Menu>
-              <MenuButton className="rounded-3xl text-xl bg-white font-semibold text-stone-700 px-4 py-2 hover:bg-opacity-90">{'\u2261'}</MenuButton>
-              <MenuItems className="z-30" anchor="bottom">
-                <MenuItem>
-                  <a className="block hover:opacity-90 my-5" href="/">
-                    Home
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a className="block data-[focus]:opacity-90 my-5" href="/gallery/a">
-                    Gallery
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a className="block data-[focus]:opacity-90 my-5" href="/license">
-                    Gear
-                  </a>
-                </MenuItem>
-              </MenuItems>
-            </Menu>
-          </div>
+          <Menu>
+            <MenuButton className="rounded-3xl text-xl bg-white font-semibold text-stone-700 px-4 py-2 hover:bg-opacity-90 
+              data-[active]:bg-stone-800 data-[active]:text-white
+              ">
+              {'\u2261'}</MenuButton>
+
+            <MenuItems
+              anchor="bottom"
+              className="rounded-xl border border-stone-900 bg-stone-900 bg-opacity-90 w-[90px] p-1 text-sm/6 text-center
+              origin-top transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 [--anchor-gap:4px] sm:[--anchor-gap:8px] z-30"
+              transition
+            >
+              <MenuItem>
+
+                <a className="block data-[focus]:bg-white/10 rounded-lg text-lg" href="/">
+                  Home
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a className="block data-[focus]:bg-white/10 rounded-lg text-lg" href="/gallery">
+                  Gallery
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a className="block data-[focus]:bg-white/10 rounded-lg text-lg" href="/license">
+                  Gear
+                </a>
+              </MenuItem>
+            </MenuItems>
+          </Menu>
 
 
           <span className="uppercase text-lg font-medium">Jonathan Liu Photography</span>
