@@ -20,9 +20,69 @@ import claire6 from "/public/claire6.jpg";
 import claire7 from "/public/claire7.jpg";
 import claire8 from "/public/claire8.jpg";
 
+import ang0 from "/public/ang0.jpg";
+import ang1 from "/public/ang1.jpg";
+import ang2 from "/public/ang2.jpg";
+import ang3 from "/public/ang3.jpg";
+import ang4 from "/public/ang4.jpg";
+import ang5 from "/public/ang5.jpg";
+
+import angela0 from "/public/angela0.jpg";
+import angela1 from "/public/angela1.jpg";
+import angela2 from "/public/angela2.jpg";
+import angela3 from "/public/angela3.jpg";
+import angela4 from "/public/angela4.jpg";
+
+import sydney1 from "/public/sydney (1).jpg";
+import sydney2 from "/public/sydney (2).jpg";
+import sydney3 from "/public/sydney (3).jpg";
+import sydney4 from "/public/sydney (4).jpg";
+import sydney5 from "/public/sydney (5).jpg";
+import sydney6 from "/public/sydney (6).jpg";
+import sydney7 from "/public/sydney (7).jpg";
+import sydney8 from "/public/sydney (8).jpg";
+
+import eric0 from "/public/eric0.jpg";
+import eric1 from "/public/eric1.jpg";
+import eric2 from "/public/eric2.jpg";
+import eric3 from "/public/eric3.jpg";
+import eric4 from "/public/eric4.jpg";
+import eric5 from "/public/eric5.jpg";
+import eric6 from "/public/eric6.jpg";
+import eric7 from "/public/eric7.jpg";
+import eric8 from "/public/eric8.jpg";
+
+import ella0 from "/public/ella0.jpg";
+import ella1 from "/public/ella1.jpg";
+import ella2 from "/public/ella2.jpg";
+import ella3 from "/public/ella3.jpg";
+import ella4 from "/public/ella4.jpg";
+
 import { StaticImageData } from "next/image";
 
-export const reb = [
+export const Eric = [
+    eric0,
+    eric3,
+    eric1,
+    eric2,
+    eric4,
+    eric5,
+    eric6,
+    eric7,
+    eric8,
+]
+
+export const Ella = [
+    ella0,
+    ella3,
+    ella1,
+    ella2,
+    ella4,
+
+]
+
+
+export const Rebecca_Beach = [
     reb0,
     reb1,
     reb2,
@@ -36,7 +96,7 @@ export const reb = [
     reb10,
 ]
 
-export const claire = [
+export const Claire = [
     claire1,
     claire2,
     claire3,
@@ -48,5 +108,43 @@ export const claire = [
     claire8,
 ]
 
-export const dic: { [name: string]: StaticImageData[] } = { "reb": reb, "claire": claire };
-export const pics: string[] = ["reb", "claire"];
+export const Angela = [
+    angela0,
+    angela1,
+    angela2,
+    angela3,
+    angela4,
+    ang0,
+    ang1,
+    ang2,
+    ang3,
+    ang4,
+    ang5,
+]
+
+export const Sydney = [
+    sydney3,
+    sydney1,
+    sydney2,
+    sydney4,
+    sydney5,
+    sydney6,
+    sydney7,
+    sydney8,
+]
+
+export const dic: { [name: string]: StaticImageData[] } =
+{
+    "Rebecca": Rebecca_Beach,
+    "Claire": Claire,
+    "Angela": Angela,
+    "Sydney": Sydney,
+    "Eric": Eric,
+    "Ella": Ella
+};
+export const pics: string[] =
+    ["Rebecca",
+        "Angela",
+        "Sydney",
+        "Eric",
+        "Ella"];

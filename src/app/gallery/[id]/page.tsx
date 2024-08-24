@@ -7,7 +7,7 @@ import Masonry from "react-masonry-css";
 import classNames from "classnames";
 import Image, { StaticImageData } from "next/image";
 
-import { reb, claire, dic } from "../../_images";
+import { dic } from "../../_images";
 
 export default function Page({ params }: { params: { id: string } }) {
 
@@ -35,31 +35,11 @@ export default function Page({ params }: { params: { id: string } }) {
                         )
                         )}
                     </Masonry>
-                    {/* <TabGroup className="flex flex-col items-center w-full h-full">
-                        <TabList className="flex item-center gap-12">
-                            {tabs.map(tab => (
-                                <Tab key={tab.key} className="px-2">
-                                    {({ selected }) => (
-                                        <span className={classNames("uppercase text-lg", selected ? "text-white" : "text-stone-600")}>
-                                            {tab.display}
-                                        </span>
-                                    )}
-                                </Tab>
-                            ))}
-                        </TabList>
-                        <TabPanels >
-                            {tabers.map((taber) => (
-                                <TabPanel key={taber.key}>
-
-                                </TabPanel>
-                            ))}
-                        </TabPanels>
-                    </TabGroup> */}
                 </div>
             </main>
 
             <footer className="relative h-[90px] flex justify-center align-center uppercase text-lg font-medium z-20">
-                <p>Placeholder for footer</p>
+                <p>Jonathan Liu Photography</p>
             </footer>
         </div>
     );

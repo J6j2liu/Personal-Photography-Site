@@ -1,10 +1,7 @@
 "use client"
 
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import Head from "next/head";
-import Link from "next/link";
 import Masonry from "react-masonry-css";
-import classNames from "classnames";
 import Image from "next/image";
 
 import { dic, pics } from "../_images";
@@ -20,24 +17,30 @@ export default function Page() {
       </Head>
 
 
-      <div className="flex flex-col h-full items-center relative">
-        <Masonry breakpointCols={2} className="flex gap-4 h-full max-w-[900px] w-full p-2 sm:p-4 my-6">
-          {pics.map((key) => (
-            <a key={key} href={"/gallery/" + key}>
-              <Image
-                key={key}
-                src={dic[key][0]}
-                alt="thumbnail"
-                className="my-4 cursor-pointer"
-                placeholder="blur"
-              />
-            </a>
-          ))}
-        </Masonry>
-      </div>
+      <main className="relative pt-[110px] z-20">
+        <div className="text-center uppercase text-3xl">Gallery</div>
+
+        <div className="flex flex-col h-full items-center">
+          <Masonry breakpointCols={2} className="flex gap-4 h-full max-w-[900px] w-full p-2 sm:p-4 my-6">
+            {pics.map((key) => (
+              <div key={key + "wrapper"} className="relative">
+                <Image
+                  key={key}
+                  src={dic[key][0]}
+                  alt="thumbnail"
+                  className="my-4 cursor-pointer"
+                  placeholder="blur"
+                />
+                <a key={key + "link"} href={"/gallery/" + key} className="absolute inset-0 bg-stone-900 opacity-0 hover:opacity-40
+                items-center justify-center flex text-xl uppercase">{key}</a>
+              </div>
+            ))}
+          </Masonry>
+        </div>
+      </main>
 
       <footer className="relative h-[90px] flex justify-center align-center uppercase text-lg font-medium z-20">
-        <p>Placeholder for footer</p>
+        <p>Jonathan Liu Photography</p>
       </footer>
     </div>
   );

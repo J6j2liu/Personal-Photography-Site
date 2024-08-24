@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Expletus_Sans } from "next/font/google";
+import { Arsenal } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-import { reb } from "./_images";
+import { Rebecca_Beach } from "./_images";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import classNames from "classnames";
 
-const inter = Expletus_Sans({ subsets: ["latin"] });
+const inter = Arsenal({
+  subsets: ["latin"],
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "Website",
@@ -21,10 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={classNames(inter.className, "overflow-auto")}>
         <Image
           className="fixed left-0 top-0 z-0 object-cover h-full"
-          src={reb[10]}
+          src={Rebecca_Beach[10]}
           alt="bg"
           placeholder="blur"
           priority
@@ -67,7 +71,6 @@ export default function RootLayout({
         </header>
 
         {children}
-
       </body>
     </html>
   );
