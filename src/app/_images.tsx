@@ -41,15 +41,15 @@ import sydney6 from "/public/sydney (6).jpg";
 import sydney7 from "/public/sydney (7).jpg";
 import sydney8 from "/public/sydney (8).jpg";
 
-import eric1 from "/public/eric1.jpg";
-import eric2 from "/public/eric2.jpg";
-import eric3 from "/public/eric3.jpg";
-import eric4 from "/public/eric4.jpg";
-import eric5 from "/public/eric5.jpg";
-import eric6 from "/public/eric6.jpg";
-import eric7 from "/public/eric7.jpg";
-import eric8 from "/public/eric8.jpg";
-import eric9 from "/public/eric9.jpg";
+// import eric0 from "/public/eric0.jpg";
+// import eric1 from "/public/eric1.jpg";
+// import eric2 from "/public/eric2.jpg";
+// import eric3 from "/public/eric3.jpg";
+// import eric4 from "/public/eric4.jpg";
+// import eric5 from "/public/eric5.jpg";
+// import eric6 from "/public/eric6.jpg";
+// import eric7 from "/public/eric7.jpg";
+// import eric8 from "/public/eric8.jpg";
 
 import ella0 from "/public/ella0.jpg";
 import ella1 from "/public/ella1.jpg";
@@ -59,17 +59,17 @@ import ella4 from "/public/ella4.jpg";
 
 import { StaticImageData } from "next/image";
 
-export const Eric = [
-    eric3,
-    eric1,
-    eric2,
-    eric4,
-    eric5,
-    eric6,
-    eric7,
-    eric8,
-    eric9,
-]
+// export const Eric = [
+//     eric0,
+//     eric3,
+//     eric1,
+//     eric2,
+//     eric4,
+//     eric5,
+//     eric6,
+//     eric7,
+//     eric8,
+// ]
 
 export const Ella = [
     ella0,
@@ -138,7 +138,7 @@ export const dic: { [name: string]: StaticImageData[] } =
     "Claire": Claire,
     "Angela": Angela,
     "Sydney": Sydney,
-    "Eric": Eric,
+    // "Eric": Eric,
     "Ella": Ella
 };
 export const pics: string[] =
