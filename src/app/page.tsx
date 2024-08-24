@@ -9,6 +9,7 @@ export default function Home() {
         <p>Jonathan Liu Photography</p>
       </footer>
     </div>
+
   );
 
 }
