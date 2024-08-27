@@ -12,7 +12,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-import { dic } from "../../_images";
+import { dic } from "../_images";
 
 
 export default function Page({ params }: { params: { id: string } }) {
@@ -28,11 +28,12 @@ export default function Page({ params }: { params: { id: string } }) {
             </Head>
 
             <main className="relative pt-[110px] z-20">
-                <div className="text-center uppercase text-xl">{params.id}</div>
+                <div className="text-center uppercase text-xl select-none">{dic[params.id].title}</div>
 
                 <div className="flex flex-col h-full items-center">
-                    <Masonry breakpointCols={2} className="flex gap-4 h-full max-w-[900px] w-full p-2 sm:p-4 my-6">
-                        {dic[params.id].map((image, idx) => (
+                    <Masonry breakpointCols={2} className="flex gap-4 h-full max-w-[900px] w-full p-2 sm:p-4 my-6 select-none">
+                        {dic[params.id].data.map((image, idx) => (
+
                             <Image
                                 key={image.src}
                                 src={image}
@@ -48,14 +49,14 @@ export default function Page({ params }: { params: { id: string } }) {
                     <Lightbox
                         open={open}
                         close={() => setOpen(false)}
-                        slides={dic[params.id]}
+                        slides={dic[params.id].data}
                         index={ind}
                         plugins={[Zoom, Thumbnails]}
                     />
                 </div>
             </main>
 
-            <footer className="relative h-[90px] flex justify-center align-center uppercase text-lg font-medium z-20">
+            <footer className="relative h-[90px] flex justify-center align-center uppercase text-lg font-medium z-20 select-none">
                 <p>Jonathan Liu Photography</p>
             </footer>
         </div>

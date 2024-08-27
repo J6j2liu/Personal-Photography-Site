@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Arsenal } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-import { Rebecca_Beach } from "./_images";
+import reb10 from "/public/reb10.jpg";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import classNames from "classnames";
 
@@ -26,15 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={classNames(inter.className, "overflow-auto")}>
-        <Image
-          className="fixed left-0 top-0 z-0 object-cover h-full"
-          src={Rebecca_Beach[10]}
-          alt="bg"
-          placeholder="blur"
-          priority
-        />
+        <div className="select-none">
+          <Image
+            className="fixed left-0 top-0 z-0 object-cover h-full select-none"
+            src={reb10}
+            alt="bg"
+            placeholder="blur"
+            priority
+          />
+        </div>
 
-        <header className="fixed top-0 w-full z-30 flex justify-between items-center h-[90px] px-10">
+        <header className="fixed top-0 w-full z-30 flex justify-between items-center h-[90px] px-10 select-none">
           <Menu>
             <MenuButton className="rounded-3xl text-xl bg-white font-semibold text-stone-700 px-4 py-2 hover:bg-opacity-90 
               data-[active]:bg-stone-800 data-[active]:text-white
@@ -44,7 +46,7 @@ export default function RootLayout({
             <MenuItems
               anchor="bottom"
               className="rounded-xl border border-stone-900 bg-stone-900 bg-opacity-90 w-[90px] p-1 text-sm/6 text-center
-              origin-top transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 [--anchor-gap:4px] sm:[--anchor-gap:8px] z-30"
+              origin-top transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 [--anchor-gap:4px] sm:[--anchor-gap:8px] z-30 select-none"
               transition
             >
               <MenuItem>
@@ -54,8 +56,8 @@ export default function RootLayout({
                 </a>
               </MenuItem>
               <MenuItem>
-                <a className="block data-[focus]:bg-white/10 rounded-lg text-lg" href="/gallery">
-                  Gallery
+                <a className="block data-[focus]:bg-white/10 rounded-lg text-lg" href="/aboutme">
+                  About Me
                 </a>
               </MenuItem>
               <MenuItem>
@@ -67,7 +69,7 @@ export default function RootLayout({
           </Menu>
 
 
-          <span className="uppercase text-lg font-medium">Jonathan Liu Photography</span>
+          <span className="uppercase text-lg font-medium select-none">Jonathan Liu Photography</span>
         </header>
 
         {children}

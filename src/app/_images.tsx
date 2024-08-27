@@ -8,7 +8,6 @@ import reb6 from "/public/reb6.jpg";
 import reb7 from "/public/reb7.jpg";
 import reb8 from "/public/reb8.jpg";
 import reb9 from "/public/reb9.jpg";
-import reb10 from "/public/reb10.jpg";
 
 import claire0 from "/public/claire0.jpg";
 import claire1 from "/public/claire1.jpg";
@@ -92,7 +91,6 @@ export const Rebecca_Beach = [
     reb7,
     reb8,
     reb9,
-    reb10,
 ]
 
 export const Claire = [
@@ -132,18 +130,19 @@ export const Sydney = [
     sydney8,
 ]
 
-export const dic: { [name: string]: StaticImageData[] } =
+export const dic: { [name: string]: { data: StaticImageData[], title: string } } =
 {
-    "Rebecca": Rebecca_Beach,
-    "Claire": Claire,
-    "Angela": Angela,
-    "Sydney": Sydney,
-    "Eric": Eric,
-    "Ella": Ella
+    "00": { data: Rebecca_Beach, title: "Sunset Beach Photoshoot" },
+    "01": { data: Claire, title: "Sunny Forest Photoshoot" },
+    "02": { data: Angela, title: "Misty Garden Photoshoot" },
+    "03": { data: Sydney, title: "Misty Waterside Photoshoot" },
+    "04": { data: Eric, title: "Soccer Photoshoot" },
+    "05": { data: Ella, title: "Beachside Portirat Photoshoot" },
 };
 export const pics: string[] =
-    ["Rebecca",
-        "Angela",
-        "Sydney",
-        "Eric",
-        "Ella"];
+    ["00",
+        "02",
+        "03",
+        "04",
+        "05",
+        "01"];
