@@ -61,8 +61,8 @@ export default function RootLayout({
                 </a>
               </MenuItem>
               <MenuItem>
-                <a className="block data-[focus]:bg-white/10 rounded-lg text-lg" href="/license">
-                  Gear
+                <a className="block data-[focus]:bg-white/10 rounded-lg text-lg" href="/contact">
+                  Contact
                 </a>
               </MenuItem>
             </MenuItems>
