@@ -56,6 +56,17 @@ import ella2 from "/public/ella2.jpg";
 import ella3 from "/public/ella3.jpg";
 import ella4 from "/public/ella4.jpg";
 
+import lauren1 from "/public/lauren (1).jpg";
+import lauren2 from "/public/lauren (2).jpg";
+import lauren3 from "/public/lauren (3).jpg";
+import lauren4 from "/public/lauren (4).jpg";
+import lauren5 from "/public/lauren (5).jpg";
+import lauren6 from "/public/lauren (6).jpg";
+import lauren7 from "/public/lauren (7).jpg";
+import lauren8 from "/public/lauren (8).jpg";
+import lauren9 from "/public/lauren (9).jpg";
+import lauren10 from "/public/lauren (10).jpg";
+
 import { StaticImageData } from "next/image";
 
 export const Eric = [
@@ -112,6 +123,9 @@ export const Angela = [
     ang3,
     ang4,
     ang5,
+]
+
+export const Ang = [
     ang6,
     ang7,
     ang8,
@@ -130,6 +144,19 @@ export const Sydney = [
     sydney8,
 ]
 
+export const Lauren = [
+    lauren7,
+    lauren2,
+    lauren3,
+    lauren4,
+    lauren5,
+    lauren6,
+    lauren1,
+    lauren8,
+    lauren9,
+    lauren10,
+]
+
 export const dic: { [name: string]: { data: StaticImageData[], title: string } } =
 {
     "00": { data: Rebecca_Beach, title: "Sunset Beach Photoshoot" },
@@ -138,11 +165,17 @@ export const dic: { [name: string]: { data: StaticImageData[], title: string } }
     "03": { data: Sydney, title: "Misty Waterside Photoshoot" },
     "04": { data: Eric, title: "Soccer Photoshoot" },
     "05": { data: Ella, title: "Beachside Portirat Photoshoot" },
+    "06": { data: Ang, title: "Retro Moody Photoshoot" },
+    "07": { data: Lauren, title: "Pike Place Photoshoot" },
 };
+
 export const pics: string[] =
     ["00",
         "02",
         "03",
         "04",
         "05",
-        "01"];
+        "01",
+        "06",
+        "07",
+    ];

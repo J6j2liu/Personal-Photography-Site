@@ -7,15 +7,15 @@ export default function Home() {
       <div className="relative z-30 text-3xl font-bold">About Me</div>
 
       <main className="py-8">
-        <div className="flex flex-col h-full items-center py-5">
+        <div className="flex flex-col h-full items-center py-5 px-4">
           <div className="flex relative max-w-[900px] justify-center justify-between gap-5">
             <Image
+              className="flex max-w-[250px] object-scale-down object-contain"
               src={self}
               alt="self"
-              width={250}
               placeholder="blur"
             />
-            <div className="text-2xl "> My name is Jonathan Liu, I am a computer science and chemisty major at the Univeristy of Washington and a hobbyist photograhper. I mainly do close up portrait photography.</div>
+            <div className="flex text-2xl min-w-[250px]"> My name is Jonathan Liu, I am a computer science and chemisty major at the Univeristy of Washington and a hobbyist photograhper. I mainly do close up portrait photography.</div>
           </div>
         </div>
       </main>
