@@ -71,14 +71,14 @@ import { StaticImageData } from "next/image";
 
 export const Eric = [
     eric0,
-    eric3,
     eric1,
+    eric3,
     eric2,
     eric4,
     eric5,
     eric6,
-    eric7,
     eric8,
+    eric7,
 ]
 
 export const Ella = [

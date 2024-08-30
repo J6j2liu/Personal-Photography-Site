@@ -12,8 +12,9 @@ const inter = Arsenal({
 });
 
 export const metadata: Metadata = {
-  title: "Website",
-  description: "Website",
+  title: 'Gallery',
+  description: "Jonathan Liu Photography",
+  icons: "/favicon.ico",
 };
 
 
@@ -52,7 +53,7 @@ export default function RootLayout({
               <MenuItem>
 
                 <a className="block data-[focus]:bg-white/10 rounded-lg text-lg" href="/">
-                  Home
+                  Gallery
                 </a>
               </MenuItem>
               <MenuItem>

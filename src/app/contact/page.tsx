@@ -1,4 +1,11 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Contacts',
+  description: "Jonathan Liu Photography",
+  icons: "/favicon.ico",
+};
 
 export default function Home() {
 
@@ -6,7 +13,7 @@ export default function Home() {
     <div className="h-full overflow-auto text-center pt-[110px] bg-stone-900">
       <main>
         <div className="flex flex-col h-full items-center">
-          <div className="relative z-30 text-3xl font-bold py-10">My Contacts</div>
+          <div className="relative z-30 text-3xl py-10">My Contacts</div>
           <div className="flex relative max-w-[900px] justify-center justify-between gap-5 cursor-pointer">
             <Link href={"https://www.instagram.com/jonathan.liu_"} target="_blank">
               <svg
@@ -21,7 +28,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="relative z-30 text-3xl font-bold py-10">Project Repository</div>
+          <div className="relative z-30 text-3xl py-10">Project Repository</div>
           <div className="flex relative max-w-[900px] justify-center justify-between gap-5 cursor-pointer">
             <Link href="https://github.com/J6j2liu/Personal-Photography-Site" target="_blank">
               <svg
