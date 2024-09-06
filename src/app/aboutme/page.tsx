@@ -32,7 +32,7 @@ export default function Home() {
       <div className="relative z-30 text-3xl">My Gear</div>
       <main className="py-8">
         <div className="flex flex-col h-full items-center py-5">
-          <div className="flex relative max-w-[900px] justify-center justify-between gap-5">
+          <div className="flex relative max-w-[900px] justify-center justify-between gap-5 p-2">
             <div className="text-base sm:text-2xl"> I currently use the Canon r50 as my camera body. Most of my shots are done using the ef 50mm f1.8 stm lens but I also have the rf-s 18-45mm kit lens and the ef 70-300mm zoom lens.</div>
           </div>
         </div>

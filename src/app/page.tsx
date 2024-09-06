@@ -25,7 +25,7 @@ export default function Page() {
                   placeholder="blur"
                 />
                 <a key={key + "link"} href={"/" + key} className="absolute inset-0 bg-stone-900 opacity-0 hover:opacity-40
-                items-center justify-center flex text-xl uppercase duration-300">{dic[key].title}</a>
+                items-center justify-center flex text-xl uppercase duration-300 text-center">{dic[key].title}</a>
               </div>
             ))}
           </Masonry>
