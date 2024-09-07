@@ -179,3 +179,4 @@ export const pics: string[] =
         "06",
         "07",
     ];
+
